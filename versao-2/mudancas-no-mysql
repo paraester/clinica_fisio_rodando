@@ -1,0 +1,17 @@
+CREATE TABLE `usuarios` (
+  `id` int(100) NOT NULL,
+  `loginusuario` varchar(16) NOT NULL,
+  `senhausuario` varchar(15) NOT NULL,
+  `ultimologin` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `usuarios` (`id`, `loginusuario`, `senhausuario`, `ultimologin`) VALUES
+(1, 'adm', 'adm', NULL);
+
+ALTER TABLE `usuarios` MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
+ALTER TABLE `avaliacao` CHANGE `observacaodehoje` `observacaodehoje` MEDIUMTEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `avaliacao` CHANGE `idcliente` `idcliente` INT(100) NOT NULL; 
+
+ALTER TABLE `clientes` CHANGE `id` `id` INT(100) NOT NULL AUTO_INCREMENT;

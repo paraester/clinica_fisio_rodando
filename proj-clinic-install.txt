@@ -1,0 +1,110 @@
+formulario de avaliação - Implementar data na busca e acrescentar campo para "confirmar pagamento realizado" Houve pagamento nesta sessao?
+
+no formulário cadastro de clientes
+objetivos - jtextfield
+condutas - jtextfield
+diagnostico fisioterapeuticos - jtextfield
+
+
+a pensar cadastro financeiro
+
+consultar pessoa e dois cliques form add pagamentos realizados.
+
+
+informações computador - Notebook
+
+
+windows 10
+i3-2Ghz 4 GB
+64bits
+
+resolução 1366x768
+
+
+
+"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump" -u userjava -p looproject --password=senhajava > clinica.sql
+
+
+
+https://cdn.mysql.com//Downloads/MySQLInstaller/mysql-installer-web-community-5.7.17.0.msi
+
+mysql
+
+userjava senhajava
+
+https://notepad-plus-plus.org/repository/7.x/7.3/npp.7.3.Installer.exe
+
+C:\Users\Coffe\Documents\lixo.sql
+
+
+
+
+CREATE TABLE `avaliacao` (
+  `id` int(11) NOT NULL,
+  `idcliente` int(11) NOT NULL,
+  `medicoresponsavel` varchar(250) DEFAULT NULL,
+  `medicamento` varchar(250) DEFAULT NULL,
+  `observacaodehoje` varchar(350) DEFAULT NULL,
+  `dataavaliacao` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(250) NOT NULL,
+  `idade` int(11) NOT NULL,
+  `endereco` varchar(250) DEFAULT NULL,
+  `datanascimento` date DEFAULT NULL,
+  `sexo` varchar(250) DEFAULT NULL,
+  `planosaude` varchar(250) DEFAULT NULL,
+  `telefone` varchar(250) DEFAULT NULL,
+  `responsavel` varchar(250) DEFAULT NULL,
+  `especialidade` varchar(250) DEFAULT NULL,
+  `datainiciotratamento` date DEFAULT NULL,
+  `datadaavaliacao` date DEFAULT NULL,
+  `medicoresponsavel` varchar(250) DEFAULT NULL,
+  `qtdesessoesrealizadas` int(11) DEFAULT NULL,
+  `objetivos` varchar(250) DEFAULT NULL,
+  `condutas` varchar(250) DEFAULT NULL,
+  `diagnostico` varchar(250) DEFAULT NULL,
+  `atualizadoem` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `funcionarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(40) NOT NULL,
+  `idade` int(11) DEFAULT NULL,
+  `endereco` varchar(60) DEFAULT NULL,
+  `datanascimento` date DEFAULT NULL,
+  `sexo` varchar(20) DEFAULT NULL,
+  `planosaude` varchar(20) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `avaliacao`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `funcionarios`
+  ADD PRIMARY KEY (`id`);
+
+Database: `looproject`
+
+
+
+
+daí vamos agendar essa tarefa no windows.
+Vá em "Iniciar > Acessórios > Ferramentas do Sistema > Agendador de Tarefas"
+Clica em criar tarefa, dá um nome pra ela e marca "Executar como privilégios mais altos". Agora clica em Disparadores > Novo, no topo em "Inciar tarefa" escolhe "Ao inicializar" e clica em Ok. Agora clica em Ações > Novo > Procurar e escolhe o arquivo recém criado '.cmd'. Pronto. O windows fará o serviço pra vc diariamente.
+
+
+
+comando para enviar o arquivo 'escola_desligar_pc.php' para teu site
+
+"C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump" -u userjava -p looproject --password=senhajava > clinica.sql 
+curl  --form arquivo=@clinica.sql http://studioestercampos.com.br/clinica/backup.php
+
+
+18:00
+14:40
+19:20
+09:20
